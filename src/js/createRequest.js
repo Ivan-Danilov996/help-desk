@@ -12,7 +12,7 @@ async function createRequest(method, data, target) {
     if (target) {
       values.append('id', target.closest('.ticket').dataset.id);
     }
-    const response = await fetch(`http://localhost:7070/?${params}`, {
+    const response = await fetch(`https://help-desk-back.herokuapp.com/?${params}`, {
       method: 'POST',
       body: values,
       headers: {
@@ -23,7 +23,7 @@ async function createRequest(method, data, target) {
   } if (method === 'ticketById') {
     params.append('method', method);
     params.append('id', data.dataset.id);
-    const response = await fetch(`http://localhost:7070?${params}`, {
+    const response = await fetch(`https://help-desk-back.herokuapp.com/?${params}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -33,7 +33,7 @@ async function createRequest(method, data, target) {
   } if (method === 'deleteTicket') {
     params.append('method', method);
     params.append('id', data.closest('.ticket').dataset.id);
-    const response = await fetch(`http://localhost:7070?${params}`, {
+    const response = await fetch(`https://help-desk-back.herokuapp.com/?${params}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -43,7 +43,7 @@ async function createRequest(method, data, target) {
   } if (method === 'checkTicket') {
     params.append('method', method);
     params.append('id', data.dataset.id);
-    const response = await fetch(`http://localhost:7070?${params}`, {
+    const response = await fetch(`https://help-desk-back.herokuapp.com/?${params}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -52,7 +52,7 @@ async function createRequest(method, data, target) {
     return response.json(); // parses JSON response into native JavaScript objects
   }
   params.append('method', method);
-  const response = await fetch(`http://localhost:7070?${params}`, {
+  const response = await fetch(`https://help-desk-back.herokuapp.com/?${params}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
