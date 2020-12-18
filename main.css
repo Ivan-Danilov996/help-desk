@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+input, textarea {
+    padding: 5px;
+}
+body {
+    margin-top: 20px;
+    position: relative;
+}
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.application {
+    background-color: darkgray;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tickets {
+    margin-top: 10px;
+    background-color: cornsilk;
+}
+
+
+.ticket {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.ticket-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticket-description {
+    margin-top: 10px;
+    margin-left: 113px;
+}
+
+.ticket:nth-child(n+2) {
+    border-top: none;
+}
+
+.circle, .edit, .delete {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle:hover, .edit:hover, .delete:hover {
+    cursor: pointer;
+}
+
+.edit-block {
+    display: flex;
+}
+
+.edit {
+    margin-right: 5px;
+}
+
+.modal-form {
+    width: 50%;
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: blanchedalmond;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: none;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ok {
+    margin-left: 10px;
+}
+
+
+
+
+
+
+.active {
+    display: block;
+}
